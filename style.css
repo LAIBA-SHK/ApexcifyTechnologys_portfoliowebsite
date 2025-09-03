@@ -160,6 +160,7 @@ nav ul li a {
     padding: 30px 20px;
     margin-bottom: 40px;
     padding-bottom: 50px;
+    text-align: center;
 }
 
 .skill h1 {
@@ -177,9 +178,12 @@ nav ul li a {
 
 .row {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     gap: 100px;
-    margin-bottom: 20px;
+    max-width: 1000px;
+    margin: 0 auto 20px auto;
+    
 }
 
 .row figure {
@@ -187,6 +191,7 @@ nav ul li a {
     background: #1e1e1e;
     box-shadow: 0px 0px 3px rgb(191, 100, 210);
     margin-top: 20px;
+    overflow: hidden;
 }
 
 .row figure img {
@@ -247,7 +252,7 @@ nav ul li a {
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0px 0px 3px rgb(191, 100, 210);
-    max-width: 250px;
+    max-width: 300px;
     max-height: auto;
 }
 
@@ -371,7 +376,12 @@ textarea {
     color: rgb(191, 100, 210);
     text-align: left;
 }
-
+.contacts .info{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    
+}
 .contacts .info h3 {
     font-size: 16px;
     font-weight: normal;
@@ -427,7 +437,9 @@ html {
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
-        text-align: center;
+    }
+    nav ul li.header{
+        text-align: left;
     }
 
     .intro {
@@ -449,21 +461,32 @@ html {
 
     .row {
         flex-direction: column;
-        gap: 30px;
+        align-items: center;
+        gap: 20px;
     }
-
+    .row figure{
+        width: 90%;
+        background: black;
+    }
     .projects {
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
         gap: 40px;
     }
 
     .projects figure {
         width: 100%;
         max-width: 300px;
+        align-items: center;
     }
-
+    
     .contacts .form {
-        width: 100%;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .contacts .info {
+        text-align: center;
     }
 }
 
